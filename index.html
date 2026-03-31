@@ -1,1 +1,46 @@
 
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Typing Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1>Travel Typing Game</h1>
+    <p>旅する桃鉄風タイピングゲーム</p>
+  </header>
+
+  <main class="game-container">
+    <section class="title-screen">
+      <h2>スタート駅</h2>
+      <img src="assets/img/characters/player.png" alt="主人公" class="character">
+      <button id="startButton">ゲームスタート</button>
+    </section>
+
+    <section class="map-screen">
+      <h2>マップ</h2>
+      <img src="assets/img/backgrounds/map-bg.jpg" alt="マップ背景" class="map-bg">
+      <p>駅から駅へ進んでタイピング勝負！</p>
+    </section>
+
+    <section class="typing-screen">
+      <h2>タイピング</h2>
+      <div class="word-box">
+        <p id="targetWord">train</p>
+      </div>
+      <input type="text" id="typingInput" placeholder="ここに入力">
+      <button id="checkButton">判定</button>
+      <p id="resultText"></p>
+    </section>
+  </main>
+
+  <audio id="bgm" src="assets/audio/bgm/title.mp3" loop></audio>
+  <audio id="correctSound" src="assets/audio/sfx/correct.mp3"></audio>
+  <audio id="missSound" src="assets/audio/sfx/miss.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
