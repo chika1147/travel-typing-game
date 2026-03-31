@@ -1,1 +1,0 @@
-# travel-typing-game
