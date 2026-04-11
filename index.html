@@ -9,14 +9,40 @@
 <body>
   <header class="topbar">
     <h1>Travel Typing Game</h1>
-    <p>旅するタイピングゲーム</p>
+    <p>ひらがな・カタカナ・漢字を学年別にえらべるタイピングゲーム</p>
   </header>
 
   <main class="game-container">
     <!-- スタート画面 -->
     <section class="screen active" id="startScreen">
       <h2>スタート駅</h2>
+
       <img src="assets/img/冒険者の楽しい一日.png" alt="主人公キャラクター" class="character">
+
+      <div class="select-box">
+        <label for="categorySelect">問題のしゅるい</label>
+        <select id="categorySelect">
+          <option value="hiragana">ひらがな</option>
+          <option value="katakana">カタカナ</option>
+          <option value="kanji">漢字</option>
+        </select>
+      </div>
+
+      <div class="select-box">
+        <label for="gradeSelect">学年をえらぶ</label>
+        <select id="gradeSelect">
+          <option value="g1">小学1年</option>
+          <option value="g2">小学2年</option>
+          <option value="g3">小学3年</option>
+          <option value="g4">小学4年</option>
+          <option value="g5">小学5年</option>
+          <option value="g6">小学6年</option>
+          <option value="j1">中学1年</option>
+          <option value="j2">中学2年</option>
+          <option value="j3">中学3年</option>
+        </select>
+      </div>
+
       <button id="startButton">ゲームスタート</button>
     </section>
 
@@ -26,11 +52,14 @@
 
       <div class="status-box">
         <p>スコア: <span id="score">0</span></p>
-        <p>残り問題: <span id="remaining">5</span></p>
+        <p>のこり: <span id="remaining">5</span></p>
+        <p>しゅるい: <span id="currentCategoryLabel">ひらがな</span></p>
+        <p>学年: <span id="currentGradeLabel">小学1年</span></p>
       </div>
 
       <div class="word-box">
-        <p id="targetWord">train</p>
+        <p id="questionLabel">問題</p>
+        <p id="targetWord">あさ</p>
       </div>
 
       <input type="text" id="typingInput" placeholder="ここに入力してね">
