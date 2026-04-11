@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -10,36 +9,45 @@
 <body>
   <header class="topbar">
     <h1>Travel Typing Game</h1>
-    <p>旅するタイピングゲーム</p>
+    <p>旅する桃鉄風タイピングゲーム</p>
   </header>
 
   <main class="game-container">
-    <section class="title-screen">
+    <!-- スタート画面 -->
+    <section class="screen active" id="startScreen">
       <h2>スタート駅</h2>
-      <img src="assets/img/冒険者の楽しい一日.png" alt="キャラ" class="character">
+      <img src="assets/img/冒険者の楽しい一日.png" alt="主人公キャラクター" class="character">
       <button id="startButton">ゲームスタート</button>
     </section>
 
-    <section class="map-screen">
-      <h2>マップ</h2>
-      <img src="assets/img/backgrounds/map-bg.jpg" alt="マップ背景" class="map-bg">
-      <p>駅から駅へ進んでタイピング勝負！</p>
-    </section>
+    <!-- タイピング画面 -->
+    <section class="screen" id="typingScreen">
+      <h2>タイピングチャレンジ</h2>
 
-    <section class="typing-screen">
-      <h2>タイピング</h2>
+      <div class="status-box">
+        <p>スコア: <span id="score">0</span></p>
+        <p>残り問題: <span id="remaining">5</span></p>
+      </div>
+
       <div class="word-box">
         <p id="targetWord">train</p>
       </div>
-      <input type="text" id="typingInput" placeholder="ここに入力">
+
+      <input type="text" id="typingInput" placeholder="ここに入力してね">
       <button id="checkButton">判定</button>
+
       <p id="resultText"></p>
+    </section>
+
+    <!-- 結果画面 -->
+    <section class="screen" id="resultScreen">
+      <h2>ゴール！</h2>
+      <p class="final-score">あなたのスコア: <span id="finalScore">0</span></p>
+      <button id="restartButton">もう一度あそぶ</button>
     </section>
   </main>
 
-<audio id="bgm" src="assets/audio/Ticket Polka.mp3" loop></audio>
-  <audio id="correctSound" src="assets/audio/sfx/correct.mp3"></audio>
-  <audio id="missSound" src="assets/audio/sfx/miss.mp3"></audio>
+  <audio id="bgm" src="assets/audio/Ticket Polka.mp3" loop></audio>
 
   <script src="script.js"></script>
 </body>
