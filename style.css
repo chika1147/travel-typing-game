@@ -1,8 +1,5 @@
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(180deg, #87ceeb, #d7f4f7);
-  color: #222;
+  background-image: url("assets/img/background.png");
 }
 
 .topbar {
