@@ -8,8 +8,8 @@
 </head>
 <body>
   <header class="topbar">
-    <h1>Travel Typing Game</h1>
-    <p>ひらがな・カタカナ・漢字を学年別にえらべるタイピングゲーム</p>
+    <h1>🚂 Travel Typing Game</h1>
+    <p>ひらがな・カタカナ・漢字を学年別にえらべる旅タイピングゲーム</p>
   </header>
 
   <main class="game-container">
@@ -48,11 +48,19 @@
 
     <!-- タイピング画面 -->
     <section class="screen" id="typingScreen">
-      <h2>タイピングチャレンジ</h2>
+      <h2>タイピングの旅</h2>
+
+      <!-- 旅マップ（電車が進む） -->
+      <div class="travel-map">
+        <div class="map-line"></div>
+        <div class="train" id="train">🚂</div>
+        <div class="stations" id="stations"></div>
+      </div>
 
       <div class="status-box">
         <p>スコア: <span id="score">0</span></p>
-        <p>のこり: <span id="remaining">5</span></p>
+        <p>コンボ: <span id="combo">0</span></p>
+        <p>のこり: <span id="remaining">7</span></p>
         <p>しゅるい: <span id="currentCategoryLabel">ひらがな</span></p>
         <p>学年: <span id="currentGradeLabel">小学1年</span></p>
       </div>
@@ -70,8 +78,10 @@
 
     <!-- 結果画面 -->
     <section class="screen" id="resultScreen">
-      <h2>ゴール！</h2>
+      <h2>🎉 ゴール！</h2>
+      <p class="goal-text" id="goalText"></p>
       <p class="final-score">あなたのスコア: <span id="finalScore">0</span></p>
+      <p class="final-combo">最高コンボ: <span id="maxCombo">0</span></p>
       <button id="restartButton">もう一度あそぶ</button>
     </section>
   </main>
